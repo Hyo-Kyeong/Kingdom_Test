@@ -1,7 +1,10 @@
 body{
-  background-color: pink
+  background: url('../img/background.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto 50%;
 }
-
+/* linear-gradient(#51abf5, rgb(250, 214, 146) */
 *{
   font-family: 'Black Han Sans', sans-serif;
 }
