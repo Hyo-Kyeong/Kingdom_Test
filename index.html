@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="./css/result.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('1d9dad7095e2dddb2a25bbd02a62b33f');
+        Kakao.isInitialized();
+    </script>
   </head>
   <body>
     <div class="container">
@@ -57,10 +62,11 @@
       <div id="resultImg" class="col-lg-6 col-md-8 col-sm-10 col-12 my-3 mx-auto">
       </div>
       <div class="resultDesc"></div>
-      <button type="button" class="kakao mt-3 py-2 px-3">공유하기</button>
+      <button type="button" class="kakao mt-3 py-2 px-3" onclick="js/kakaoShare()">공유하기</button>
     </section>
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
+    <scrip src="./js/share.js" charset="utf-8"></scrip>
   </div>
   </body>
 </html>
