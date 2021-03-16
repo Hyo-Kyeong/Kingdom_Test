@@ -7,6 +7,7 @@ const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 function calResult(){
   var result = select.indexOf(Math.max(...select));
+  console.log(select)
   return result;
 }
 
