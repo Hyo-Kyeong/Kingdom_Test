@@ -1,7 +1,7 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-const endPoint = 4;
+const endPoint = 5;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
@@ -18,7 +18,7 @@ function setResult(){
 
   var resultImg = document.createElement("img");
   const imgDiv = document.querySelector("#resultImg");
-  var imgURL = "img/img" + (point+1) + ".png";
+  var imgURL = "img/img" + point + ".png";
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add("img-fluid");
