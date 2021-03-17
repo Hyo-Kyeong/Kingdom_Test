@@ -18,8 +18,12 @@
   font-size: 26px;
 }
 
-.resultDesc{
+.resultScript {
   font-size: 20px;
+  font-weight: bold;
+}
+.resultDesc{
+  font-size: 17px;
 }
 
 .kakao{

@@ -2,12 +2,13 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 const endPoint = 5;
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 function calResult(){
   var result = select.indexOf(Math.max(...select));
   console.log(select)
+  console.log(infoList.length)
   return result;
 }
 
@@ -23,6 +24,9 @@ function setResult(){
   resultImg.alt = point;
   resultImg.classList.add("img-fluid");
   imgDiv.appendChild(resultImg);
+
+  const resultScript = document.querySelector(".resultScript");
+  resultScript.innerHTML = infoList[point].script;
 
   const resultDesc = document.querySelector(".resultDesc");
   resultDesc.innerHTML = infoList[point].desc;
