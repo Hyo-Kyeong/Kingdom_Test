@@ -35,7 +35,7 @@ html, body {
   animation-name: backCloudAnimation;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  z-index: -101;
+  z-index: -1000;
 }
 
 
@@ -52,7 +52,7 @@ html, body {
   animation-name: frontCloudAnimation;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  z-index: -100;
+  z-index: -999;
 }
 
 .card-main {

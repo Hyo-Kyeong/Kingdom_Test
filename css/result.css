@@ -16,9 +16,10 @@
 #resultImg {
   position: absolute;
   height: 50vh;
+  width: 100%;
   line-height:50vh;
   top: 10vh;
-  animation: cookieAnimation 2s linear infinite aternate;
+  animation: cookieAnimation 2s linear infinite;
 }
 
 .resultScript {

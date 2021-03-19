@@ -70,8 +70,6 @@ function setLoading(){
 }
 
 function goLoading(){
-  qna.style.WebkitAnimation = "fadeOut 1s";
-  qna.style.animation = "fadeOut 1s";
   setTimeout(() => {
     loading.style.WebkitAnimation = "fadeIn 1s";
     loading.style.animation = "fadeIn 1s";
@@ -115,6 +113,10 @@ function addAnswer(answerText, qIdx, idx){
 
 function goNext(qIdx){
   if(qIdx === endPoint) {
+    var q  = document.querySelector(".qBox");
+    q.style.display = "none";
+    var status = document.querySelector(".status");
+    status.style.display = "none";
     goLoading();
     return;
   }
@@ -140,5 +142,20 @@ function begin(){
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
-
 }
+
+
+document.documentElement.addEventListener('touchstart', function (event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, false);
+
+var lastTouchEnd = 0;
+
+document.documentElement.addEventListener('touchend', function (event) {
+  var now = (new Date()).getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  } lastTouchEnd = now;
+}, false);
