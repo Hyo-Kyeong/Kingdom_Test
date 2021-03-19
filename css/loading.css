@@ -1,0 +1,16 @@
+#loading {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.skill-script {
+  position: absolute;
+  width: 100%;
+  top: 25vh;
+  font-size: 30px;
+  padding: 30px;
+}

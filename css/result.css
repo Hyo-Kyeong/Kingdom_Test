@@ -1,40 +1,98 @@
-#result{
+#result {
   display: none;
-  background-color: whitesmoke;
-  width: 80%;
+  position: relative;
+  height: 100%;
+  color: white;
   text-align: center;
-  border-radius: 20px;
 }
 
-#ShareResult{
-  background-color: whitesmoke;
-  width: 80%;
+#shareResult {
+  position: relative;
+  height: 100%;
+  color: white;
   text-align: center;
-  border-radius: 20px;
 }
 
-
-.resultName{
-  font-size: 26px;
+#resultImg {
+  position: absolute;
+  height: 50vh;
+  line-height:50vh;
+  top: 10vh;
+  animation: cookieAnimation 2s linear infinite aternate;
 }
 
 .resultScript {
-  font-size: 20px;
-  font-weight: bold;
-}
-.resultDesc{
-  font-size: 17px;
+  position: absolute;
+  bottom: 3vh;
+  width: 100%;
 }
 
-.kakao{
-  color: white;
-  background-color: #FEE500;
-  font-size: 20px;
-  border: 0px;
+.resultDesc {
+  width: 100%;
+  position: absolute;
+  bottom: -90vh;
+  height: 80vh;
+}
+
+.result-back {
+  display: none;
+  background-image: url('../img/long_back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100vw;
+  height: 200vh;
+}
+
+.result-back-color {
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.share-result-back {
+  background-image: url('../img/long_back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100vw;
+  height: 200vh;
+}
+
+.share-result-back-color {
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.kakao {
+  position: absolute;
+  bottom: -120vh;
+  width: 30vw;
+  left: 25vw;
+  border: none;
   border-radius: 20px;
 }
 
-.kakao:hover, .kakao:focus{
-  background-color: white;
-  color: #FEE500;
+@media (min-width: 700px) {
+  #resultImg {
+    height: 65vh;
+    line-height:65vh;
+  }
+  #resultImg {
+
+  }
+  .kakao {
+    bottom: -110vh;
+    width: 30vw;
+    left: 10vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .kakao {
+    bottom: -110vh;
+    width: 10vw;
+    left: 10vw;
+  }
 }

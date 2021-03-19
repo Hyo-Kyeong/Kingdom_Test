@@ -1,25 +1,32 @@
+const card = document.querySelector(".card-main");
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
+const loading = document.querySelector("#loading");
+const result_back = document.querySelector(".result-back")
 const endPoint = 5;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
+function rotateCard() {
+  card.style.WebkitAnimation = "rotateY 2s linear";
+  card.style.animation = "rotateY 2s linear";
+
+}
+
 function calResult(){
   var result = select.indexOf(Math.max(...select));
-  console.log(select)
-  console.log(infoList.length)
   return result;
 }
 
 function setResult(){
   let point = calResult();
   const resultName = document.querySelector(".resultname");
-  resultName.innerHTML = infoList[point].name;
+  resultName.innerHTML = infoList[point].name + '맛 쿠키';
 
   var resultImg = document.createElement("img");
   const imgDiv = document.querySelector("#resultImg");
-  var imgURL = "img/img" + point + ".png";
+  var imgURL = "img/character/img" + point + ".png";
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add("img-fluid");
@@ -33,26 +40,54 @@ function setResult(){
 }
 
 function goResult(){
+  loading.style.WebkitAnimation = "fadeOut 1s";
+  loading.style.animation = "fadeOut 1s";
+  rotateCard();
+  setTimeout(() => {
+    loading.style.display = "none";
+    setTimeout(() => {
+      result.style.WebkitAnimation = "fadeIn 1s";
+      result.style.animation = "fadeIn 1s";
+      result_back.style.WebkitAnimation = "fadeIn 1s";
+      result_back.style.animation = "fadeIn 1s";
+      setTimeout(() => {
+        result.style.display = "block";
+        result_back.style.display="block";
+      }, 1000);
+    });
+  }, 1000);
+  setResult();
+}
+
+function setLoading(){
+  let point = calResult();
+  const resultSkill = document.querySelector(".skill-script");
+  resultSkill.innerHTML = infoList[point].skill;
+
+  setTimeout(() => {
+      goResult();
+  }, 2000);
+}
+
+function goLoading(){
   qna.style.WebkitAnimation = "fadeOut 1s";
   qna.style.animation = "fadeOut 1s";
   setTimeout(() => {
-    result.style.WebkitAnimation = "fadeIn 1s";
-    result.style.animation = "fadeIn 1s";
+    loading.style.WebkitAnimation = "fadeIn 1s";
+    loading.style.animation = "fadeIn 1s";
     setTimeout(() => {
       qna.style.display = "none";
-      result.style.display = "block";
-    }, 450);
+      loading.style.display = "block";
+    }, 1000);
   });
-  setResult();
+  setLoading();
 }
+
 
 function addAnswer(answerText, qIdx, idx){
   var a = document.querySelector(".answerBox");
   var answer = document.createElement("button");
   answer.classList.add("answerList");
-  answer.classList.add("my-3");
-  answer.classList.add("py-3");
-  answer.classList.add("mx-auto");
   answer.classList.add("fadeIn");
 
   a.appendChild(answer);
@@ -80,7 +115,7 @@ function addAnswer(answerText, qIdx, idx){
 
 function goNext(qIdx){
   if(qIdx === endPoint) {
-    goResult();
+    goLoading();
     return;
   }
   var q  = document.querySelector(".qBox");
@@ -88,8 +123,8 @@ function goNext(qIdx){
   for(let i in qnaList[qIdx].a){
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
-  var status = document.querySelector(".statusBar");
-  status.style.width = (100/endPoint) * (qIdx+1) + '%';
+  var status = document.querySelector(".status");
+  status.innerHTML = qIdx+1 + " / " + endPoint;
 }
 
 function begin(){
@@ -105,6 +140,5 @@ function begin(){
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
-
 
 }

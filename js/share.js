@@ -1,32 +1,31 @@
+const url = 'https://cookingdomtest.netlify.app/';
+
 function kakaoShare() {
+  var resultImg = document.querySelector('#resultImg');
+  var resultAlt = resultImg.firstElementChild.alt;
+  const shareTitle = '나와 닮은 쿠키 결과';
+  const shareDes = infoList[resultAlt].name;
+  const shareImage = url + 'img/character/img' + resultAlt + '.png';
+  const shareURL = url + 'page/result-' + resultAlt + '.html';
+
   Kakao.Link.sendDefault({
     objectType: 'feed',
     content: {
-      title: '디저트 사진',
-      description: '아메리카노, 빵, 케익',
-      imageUrl:
-        'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+      title: shareTitle,
+      description: shareDes,
+      imageUrl: shareImage,
       link: {
-        mobileWebUrl: 'https://developers.kakao.com',
-        androidExecParams: 'test',
+        mobileWebUrl: shareURL,
+        webUrl: shareURL
       },
     },
-    social: {
-      likeCount: 10,
-      commentCount: 20,
-      sharedCount: 30,
-    },
+
     buttons: [
       {
-        title: '웹으로 이동',
+        title: '결과확인하기',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-        },
-      },
-      {
-        title: '앱으로 이동',
-        link: {
-          mobileWebUrl: 'https://developers.kakao.com',
+          mobileWebUrl: shareURL,
+          webUrl: shareURL,
         },
       },
     ]
