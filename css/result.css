@@ -73,6 +73,7 @@
   left: 25vw;
   border: none;
   border-radius: 20px;
+  background-color: white;
 }
 
 @media (min-width: 700px) {
