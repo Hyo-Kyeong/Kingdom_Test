@@ -40,6 +40,10 @@
 }
 
 @media (min-width: 700px) {
+  .qbox {
+    padding: 0 5vw;
+  }
+
   .answerBox {
     bottom: 5vh;
   }
