@@ -65,4 +65,5 @@ html, body {
   z-index: 1000;
   top: 50px;
   left: 10vw;
+  opacity: 0.99;
 }
