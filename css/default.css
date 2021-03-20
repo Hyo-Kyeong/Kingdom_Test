@@ -75,7 +75,7 @@ html, body {
 }
 
 .no-webp .card-main {
-  background-Image: url("../img/characterPortraitCard.webp");
+  background-Image: url("../img/characterPortraitCard.png");
 }
 
 .card-main {
