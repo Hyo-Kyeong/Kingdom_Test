@@ -4,6 +4,8 @@ const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 const loading = document.querySelector("#loading");
 const result_back = document.querySelector(".result-back")
+const front_cloud = document.querySelector(".frontCloud");
+const back_cloud = document.querySelector(".backCloud");
 const endPoint = 5;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
@@ -70,6 +72,12 @@ function setLoading(){
 }
 
 function goLoading(){
+  front_cloud.style.opacity = "1";
+  front_cloud.style.WebkitAnimation = "none";
+  front_cloud.style.animation = "none";
+  back_cloud.style.opacity = "1";
+  back_cloud.style.WebkitAnimation = "none";
+  back_cloud.style.animation = "none";
   setTimeout(() => {
     loading.style.WebkitAnimation = "fadeIn 1s";
     loading.style.animation = "fadeIn 1s";

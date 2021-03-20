@@ -30,8 +30,9 @@ html, body {
   position: absolute;
   width: 100%;
   height: 60%;
+  opacity: 1;
   bottom: 0;
-  /* animation-name: backCloudAnimation 3s infinite linear; */
+  animation: backCloudAnimation 3s infinite linear;
   z-index: -1000;
 }
 
@@ -44,8 +45,9 @@ html, body {
   position: absolute;
   width: 100%;
   height: 60%;
+  opacity: 0.8;
   bottom: 0;
-  /* animation-name: frontCloudAnimation 3s infinite linear; */
+  animation: frontCloudAnimation 3s infinite linear;
   z-index: -999;
 }
 
