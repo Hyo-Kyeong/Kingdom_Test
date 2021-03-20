@@ -9,7 +9,7 @@ html, body {
   overflow: visible;
 }
 
-.background {
+.webp .background {
   height: 100%;
   background-image: url("../img/gameStoryBackground.webp");
   background-position: center center;
@@ -21,8 +21,20 @@ html, body {
   height: 100vh;
 }
 
+.no-webp .background {
+  height: 100%;
+  background-image: url("../img/gameStoryBackground.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.99;
+  width: 100vw;
+  height: 100vh;
+}
 
-.backCloud {
+
+.webp .backCloud {
   background-image: url("../img/backCloud.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,7 +51,24 @@ html, body {
 }
 
 
-.frontCloud {
+.no-webp .backCloud {
+  background-image: url("../img/backCloud.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  opacity: 1;
+  bottom: 0;
+  animation-name: backCloudAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  z-index: -1000;
+}
+
+
+.webp .frontCloud {
   background-image: url("../img/frontCloud.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,9 +84,37 @@ html, body {
   z-index: -999;
 }
 
-.card-main {
+.no-webp .frontCloud {
+  background-image: url("../img/frontCloud.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  opacity: 0.8;
+  bottom: 0;
+  animation-name: frontCloudAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  z-index: -999;
+}
+
+.webp .card-main {
   position: absolute;
   background-Image: url("../img/characterPortraitCard.webp");
+  background-size: 80vw 70vh;
+  background-repeat: no-repeat;
+  width: 80vw;
+  height: 70vh;
+  z-index: 1000;
+  top: 50px;
+  left: 10vw;
+}
+
+.no-webp .card-main {
+  position: absolute;
+  background-Image: url("../img/characterPortraitCard.png");
   background-size: 80vw 70vh;
   background-repeat: no-repeat;
   width: 80vw;
