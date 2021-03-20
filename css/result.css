@@ -81,13 +81,8 @@
     height: 65vh;
     line-height:65vh;
   }
-  #resultImg {
-
-  }
   .kakao {
     bottom: -110vh;
-    width: 30vw;
-    left: 10vw;
   }
 }
 
