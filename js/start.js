@@ -6,8 +6,8 @@ const loading = document.querySelector("#loading");
 const result_back = document.querySelector(".result-back");
 const front_cloud = document.querySelector(".frontCloud");
 const back_cloud = document.querySelector(".backCloud");
-const endPoint = 5;
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const endPoint = 10;
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 function rotateCard() {
@@ -95,7 +95,6 @@ function addAnswer(answerText, qIdx, idx){
   var answer = document.createElement("button");
   answer.classList.add("answerList");
   answer.classList.add("fadeIn");
-
   a.appendChild(answer);
   answer.innerHTML = answerText;
 
