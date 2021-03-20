@@ -26,6 +26,8 @@
   position: absolute;
   bottom: 3vh;
   width: 100%;
+  font-size: 24px;
+  font-style: italic;
 }
 
 .resultDesc {
