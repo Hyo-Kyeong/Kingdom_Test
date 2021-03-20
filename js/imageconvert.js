@@ -1,19 +1,17 @@
-// export function detectWebpSupport() {
-//   const image = new Image();
-//   // 1px x 1px WebP 이미지
-//   const webpdata = "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=";
-//   const callback = (event) => {
-//     // if the event is from 'onload', check the see if the image's width is 1 pixel (which indicates support). otherwise, it fails
-//     const result = event?.type === "load" && image.width === 1;
-//     console.log(result);
-//     if (result) {
-//       document.body.classList.add("webp");
-//     }
-//     else {
-//       document.body.classList.add("no-webp");
-//     }
-//   };
-//   image.onerror = callback;
-//   image.onload = callback;
-//   image.src = webpdata;
-// }
+async function supportsWebp() {
+  if (!self.createImageBitmap) return false;
+
+  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+  const blob = await fetch(webpData).then(r => r.blob());
+  return createImageBitmap(blob).then(() => true, () => false);
+}
+
+(async () => {
+  if(await supportsWebp()) {
+    document.body.classList.add("webp");
+  }
+  else {
+    document.body.classList.add("no-webp");
+    console.log("no-webp");
+  }
+})();
