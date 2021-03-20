@@ -12,6 +12,8 @@ async function supportsWebp() {
   }
   else {
     document.body.classList.add("no-webp");
+    const main_image = document.querySelector(".main-image");
+    main_image.src = "./img/yellowCookie.png"
     console.log("no-webp");
   }
 })();
