@@ -6,7 +6,7 @@ function kakaoShare() {
   const shareTitle = '나와 닮은 쿠키 결과';
   const shareDes = infoList[resultAlt].name;
   const shareImage = url + 'img/character/img' + resultAlt + '.png';
-  const shareURL = url + 'page/result-' + resultAlt + '.html';
+  const shareURL = url + 'resultPage/result-' + resultAlt + '.html';
 
   Kakao.Link.sendDefault({
     objectType: 'feed',

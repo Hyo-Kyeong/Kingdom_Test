@@ -24,7 +24,7 @@ function calResult(){
 function setResult(){
   let point = calResult();
   const resultName = document.querySelector(".resultname");
-  resultName.innerHTML = infoList[point].name + '맛 쿠키';
+  resultName.innerHTML = infoList[point].name;
 
   var resultImg = document.createElement("img");
   const imgDiv = document.querySelector("#resultImg");
@@ -39,6 +39,9 @@ function setResult(){
 
   const resultDesc = document.querySelector(".resultDesc");
   resultDesc.innerHTML = infoList[point].desc;
+
+  const resultPers = document.querySelector(".resultPers");
+  resultPers.innerText = infoList[point].personal;
 }
 
 function goResult(){

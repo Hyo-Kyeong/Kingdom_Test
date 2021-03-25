@@ -7,10 +7,12 @@ async function supportsWebp() {
 }
 
 (async () => {
+  console.log('aa');
   if(await supportsWebp()) {
     document.body.classList.add("webp");
   }
   else {
+    console.log('false');
     document.body.classList.add("no-webp");
     const main_image = document.querySelector(".main-image");
     main_image.src = "./img/yellowCookie.png"

@@ -30,11 +30,14 @@
   font-style: italic;
 }
 
-.resultDesc {
-  width: 100%;
+.result-info {
   position: absolute;
-  bottom: -90vh;
-  height: 80vh;
+  top: 85vh;
+  width: 100%;
+}
+
+.resultPers {
+  margin: 5vh 0;
 }
 
 .result-back {
@@ -44,7 +47,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   width: 100vw;
-  height: 200vh;
+  height: 250vh;
 }
 
 .result-back-color {
@@ -59,7 +62,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   width: 100vw;
-  height: 200vh;
+  height: 250vh;
 }
 
 .share-result-back-color {
@@ -69,10 +72,6 @@
 }
 
 .kakao {
-  position: absolute;
-  bottom: -120vh;
-  width: 30vw;
-  left: 25vw;
   border: none;
   border-radius: 20px;
   background-color: white;
@@ -82,17 +81,5 @@
   #resultImg {
     height: 65vh;
     line-height:65vh;
-  }
-  .kakao {
-    bottom: -110vh;
-    left: 10vw;
-  }
-}
-
-@media (min-width: 1200px) {
-  .kakao {
-    bottom: -110vh;
-    width: 10vw;
-    left: 10vw;
   }
 }
