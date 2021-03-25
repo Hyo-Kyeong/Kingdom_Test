@@ -6,7 +6,7 @@ const loading = document.querySelector("#loading");
 const result_back = document.querySelector(".result-back");
 const front_cloud = document.querySelector(".frontCloud");
 const back_cloud = document.querySelector(".backCloud");
-const endPoint = 10;
+const endPoint = 13;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
